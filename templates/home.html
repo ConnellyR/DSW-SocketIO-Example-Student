@@ -10,8 +10,16 @@
             // Connect to the Socket.IO server.
             // The connection URL has the following format:
             //     http[s]://<domain>:<port>[/<namespace>]
-            var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port + namespace);
-            
+		
+
+		
+            var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port + namespace);// can copy & paste
+            	//event handler for connecting
+		socket.on('start',function(msg){
+			$('#start').text(msg),
+		});
+		
+		
         });
     </script>
 </head>
