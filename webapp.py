@@ -20,10 +20,10 @@ def index():
 
 @socket.on('connect')
 def test_connet():
-    global thread # using the thread var created above. 
-    with thread_lock: # lock the thread so other clients can't change it.
-        if thread is None:
-            thread=sockio.start_background_task(target=background_through)
+    #global thread # using the thread var created above. 
+    #with thread_lock: # lock the thread so other clients can't change it.
+        #if thread is None:
+            #thread=sockio.start_background_task(target=background_through)
     emit('start''connected',)#name of event. send message to client
 
 
